@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+<style>
+    .container {
+        text-align: center;
+        font-size: 1.2em;
+        font-family: "Arial", sans-serif;
+        padding: 20px;
+    }
+
+    h1 {
+        border: 2px solid black;
+        text-align: center;
+        margin: 20px auto;
+        color: blue;
+        background-color: khaki;
+        width: 40%;
+        padding: 10px;
+        border-radius: 8px;
+    }
+
+    thead {
+        color: red;
+    }
+
+    table {
+        margin: auto;
+        border-collapse: collapse;
+        width: 80%;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+        transition: color 0.3s ease;
+    }
+
+    a:hover {
+        color: blue;
+    }
+
+    td, th {
+        border: 1px solid black;
+        padding: 10px;
+    }
+
+    body {
+        background-color: burlywood;
+        margin: 0;
+        padding: 0;
+    }
+</style>
+</head>
+<body>
+{% block body %}
+
+{% endblock %}
+</body>
+</html>

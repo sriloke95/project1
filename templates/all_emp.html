@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block title %}All Employees{% endblock %}
+{% csrf_token %}
+{% block body %}
+<div class="container">
+    <h1>Employee Details</h1>
+
+    <table style="border: 2px solid black; cellspacing: 0px;">
+        <thead>
+        <tr>
+            <th scope="col" style="color:red">Id</th>
+            <th scope="col">First name</th>
+            <th scope="col">Last name</th>
+            <th scope="col">Salary</th>
+            <th scope="col">Bonus</th>
+            <th scope="col">Phone Number</th>
+            <th scope="col">Role</th>
+            <th scope="col">Department</th>
+            <th scope="col">Hire date</th>
+            <th scope="col">Location</th>
+        </tr>
+        </thead>
+        {% for emp in emps %}
+        <tbody>
+            <tr>
+                <th scope="row">{{ emp.id }}</th>
+                <td>{{ emp.first_name }}</td>
+                <td>{{ emp.last_name }}</td>
+                <td>{{ emp.salary }}</td>
+                <td>{{ emp.bonus }}</td>
+                <td>{{ emp.phone }}</td>
+                <td>{{ emp.role }}</td>
+                <td>{{ emp.dept.name }}</td>
+                <td>{{ emp.hire_date }}</td>
+                <td>{{ emp.dept.location }}</td>
+            </tr>
+
+        </tbody>
+        {% endfor %}
+    </table>
+</div>
+{% endblock %}
